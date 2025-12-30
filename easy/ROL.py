@@ -1,9 +1,12 @@
-n = int(input())
-lista = []
+t = int(input())
 
-for i in range(n):
-    dane = input().split()
-    liczby = list(map(int, dane[2:]))
+lista = []
+for i in range(t):
+    dane = list(map(int, input().split()))
+    n = dane[0]
+    liczby = dane[1:]
+    liczby = liczby[1:] + liczby[:1]
     lista.append(liczby)
 
-print(lista)
+for i in lista:
+    print(*i)
